@@ -9,7 +9,7 @@ This warehouse implements text classification based on the self-attention mechan
 
 ## Dataset IMDB
 
-IMDB movie review tendency classification data set, 25,000 movie reviews from IMDB, are marked as positive/negative reviews. Movie reviews have been preprocessed into sequences of word subscripts. For convenience, the subscript of a word is calibrated based on its frequency of occurrence in the data set. For example, the word encoded by the integer 3 is the third most frequently occurring word in the data set.
+IMDB movie review tendency classification data set, 25.000 movie reviews from IMDB, are marked as positive/negative reviews. Movie reviews have been preprocessed into sequences of word subscripts. For convenience, the subscript of a word is calibrated based on its frequency of occurrence in the data set. For example, the word encoded by the integer 3 is the third most frequently occurring word in the data set.
 
 By convention, 0 does not represent any specific word, but is used to encode any unknown word.
 
@@ -28,7 +28,7 @@ $ python imdb_attention.py
 |Bidirectional LSTM|299s|0.8468|0.3475|1|
 |CNN|9s|0.8916|0.2713|3|
 |CNN LSTM|44s|0.8578|0.3435|2|
-|Pretrained word vector(fasttext)|4s|0.8916|0.2763|7|
+|Pretrained word vector (fasttext)|4s|0.8916|0.2763|7|
 |Transformer|8s|0.8432|0.3500|2|
 
 ### Conclusion
