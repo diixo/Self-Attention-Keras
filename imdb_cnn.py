@@ -20,7 +20,7 @@ embedding_dims = 50
 filters = 250
 kernel_size = 3
 hidden_dims = 250
-epochs = 5
+epochs = 3
 
 print('Loading data...')
 (x_train, y_train), (x_test, y_test) = imdb.load_data(num_words=max_features)
@@ -38,19 +38,12 @@ model = Sequential()
 
 # we start off with an efficient embedding layer which maps
 # our vocab indices into embedding_dims dimensions
-model.add(Embedding(max_features,
-                    embedding_dims,
-                    input_length=maxlen))
+model.add(Embedding(max_features, embedding_dims, input_length=maxlen))
 model.add(Dropout(0.2))
 
 # we add a Convolution1D, which will learn filters
 # word group filters of size filter_length:
-model.add(Conv1D(filters,
-                 kernel_size,
-                 padding='valid',
-                 activation='relu',
-                 strides=1))
-# we use max pooling:
+model.add(Conv1D(filters, kernel_size, padding='valid', activation='relu', strides=1))
 model.add(GlobalMaxPooling1D())
 
 # We add a vanilla hidden layer:
