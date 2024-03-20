@@ -26,7 +26,7 @@ $ python imdb_attention.py
 |---|---|---|---|---|
 |LSTM|116s|0.8339|0.3815|2|
 |Bidirectional LSTM|299s|0.8468|0.3475|1|
-|CNN|9s|0.8916|0.2713|3|
+|CNN|9s|0.8953|0.2713|3|
 |CNN LSTM|44s|0.8578|0.3435|2|
 |Pretrained word vector (fasttext)|4s|0.8916|0.2763|7|
 |Transformer|8s|0.8432|0.3500|2|
